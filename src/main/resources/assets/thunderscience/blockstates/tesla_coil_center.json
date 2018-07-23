@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "normal": { "model": "thunderscience:tesla_coil_center" },
+    "inventory": { "model": "thunderscience:tesla_coil_center" }
+  }
+}

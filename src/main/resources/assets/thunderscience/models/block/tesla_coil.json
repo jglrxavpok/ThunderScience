@@ -1,0 +1,20 @@
+{
+  "parent": "block/block",
+  "elements": [
+    {   "from": [ 0, 0, 0 ],
+      "to": [ 16, 16, 16 ],
+      "faces": {
+        "down":  { "texture": "#end" },
+        "up":    { "texture": "#end" },
+        "north": { "texture": "#side", "cullface": "north" },
+        "south": { "texture": "#side", "cullface": "south" },
+        "west":  { "texture": "#side", "cullface": "west" },
+        "east":  { "texture": "#side", "cullface": "east" }
+      }
+    }
+  ],
+  "textures": {
+      "side": "thunderscience:blocks/tesla_coil_side",
+      "end": "thunderscience:blocks/tesla_coil_top_and_bottom"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "parent": "block/block",
+  "elements": [
+    {
+      "from": [ 7, 0, 7 ],
+      "to": [ 9, 16, 9 ],
+      "faces": {
+        "down":  { "texture": "#text" },
+        "up":    { "texture": "#text" },
+        "north": { "texture": "#text" },
+        "south": { "texture": "#text" },
+        "west":  { "texture": "#text" },
+        "east":  { "texture": "#text" }
+      }
+    }
+  ],
+  "textures": {
+    "text": "thunderscience:blocks/lighting_rod"
+  }
+}

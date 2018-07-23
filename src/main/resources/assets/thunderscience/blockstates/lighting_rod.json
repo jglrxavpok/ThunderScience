@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "top=false": { "model": "thunderscience:lighting_rod" },
+    "top=true": { "model": "thunderscience:lighting_rod_top" },
+    "inventory": { "model": "thunderscience:lighting_rod_top" }
+  }
+}

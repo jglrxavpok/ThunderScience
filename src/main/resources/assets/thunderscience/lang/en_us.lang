@@ -1,0 +1,11 @@
+tile.thunder_collector.name=Thunder Collector
+tile.lighting_rod.name=Lighting Rod
+tile.rain_maker.name=Rain Maker
+tile.tesla_coil.name=Tesla Coil
+tile.tesla_coil_center.name=Tesla Coil Controller
+
+item.lighting_conductor.name=Lighting Conductor
+
+thunderscience.gui.extended_tooltip.folded=Press %s for more information
+
+fluid.liquefied_creeper=Liquefied Creeper

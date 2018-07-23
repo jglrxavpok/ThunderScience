@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "normal": { "model": "thunderscience:thunder_collector" },
+    "inventory": { "model": "thunderscience:thunder_collector" }
+  }
+}

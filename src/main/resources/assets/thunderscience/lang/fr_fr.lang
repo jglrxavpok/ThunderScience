@@ -1,0 +1,9 @@
+tile.thunder_collector.name=Collecteur de foudre
+tile.lighting_rod.name=Paratonnerre
+tile.rain_maker.name=Machine à pluie
+tile.tesla_coil.name=Bobine Tesla
+tile.tesla_coil_center.name=Controlleur de Bobine Tesla
+
+item.lighting_conductor.name=Conducteur de foudre
+
+thunderscience.gui.extended_tooltip.folded=Pressez %s pour plus d'informations

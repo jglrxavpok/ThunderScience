@@ -1,0 +1,16 @@
+[
+{
+  "modid": "thunderscience",
+  "name": "Thunder Science",
+  "description": "",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateJSON": "",
+  "authorList": ["jglrxavpok"],
+  "credits": "",
+  "logoFile": "assets/thunderscience/logo.png",
+  "screenshots": [],
+  "dependencies": ["forgelin"]
+}
+]

@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "normal": { "model": "thunderscience:rain_maker" },
+    "inventory": { "model": "thunderscience:rain_maker" }
+  }
+}
