@@ -14,8 +14,8 @@ apply plugin: "kotlin"
 
 
 version = "1.12.2-2.1.0.2"
-group = "org.jglrxavpok.moarboats" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = "moarboats"
+group = "org.jglrxavpok.thunderscience" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = "thunderscience"
 
 sourceCompatibility = targetCompatibility = '1.8' // Need this here so eclipse task generates correctly.
 compileJava {
