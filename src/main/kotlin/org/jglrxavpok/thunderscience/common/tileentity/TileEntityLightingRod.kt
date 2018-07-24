@@ -37,7 +37,6 @@ class TileEntityLightingRod: TileEntity(), ITickable {
     private fun fillPotentialCollector(rodHeight: Int) {
         val collectorPos = pos.down(rodHeight)
         val block = world.getBlockState(collectorPos).block
-        println(">> $block - $rodHeight")
         if(block is BlockThunderCollector) {
             val te = world.getTileEntity(collectorPos) as? TileEntityThunderCollector
             te?.receiveLightingShock()

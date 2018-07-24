@@ -24,9 +24,25 @@ class TileEntityThunderCollector: TileEntityEnergy(), ITickable, IEnergyStorage 
     }
 
     fun receiveLightingShock() {
-        energy += 1_210.k
-        energy = energy.coerceAtMost(maxEnergyStored)
+        val temporalChamber = findFirstTemporalChamber()
+        if(temporalChamber != null) {
+            temporalChamber.receiveLighting()
+        } else {
+            energy += 1_210.k
+            energy = energy.coerceAtMost(maxEnergyStored)
+        }
         markDirty()
+    }
+
+    private fun findFirstTemporalChamber(): TileEntityTemporalChamber? {
+        val facings = EnumFacing.values()
+        for(facing in facings) {
+            val position = pos.offset(facing)
+            val te = world.getTileEntity(position)
+            if(te is TileEntityTemporalChamber && te.canReceiveLighting())
+                return te
+        }
+        return null
     }
 
     override fun isEnergyFacing(facing: EnumFacing?): Boolean {

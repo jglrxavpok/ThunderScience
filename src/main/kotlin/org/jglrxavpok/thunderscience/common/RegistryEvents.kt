@@ -16,7 +16,7 @@ import org.jglrxavpok.thunderscience.common.tileentity.*
 
 object RegistryEvents {
 
-    val blockList = arrayListOf(BlockLightingRod, BlockRainMaker, BlockThunderCollector, BlockTeslaCoil, BlockTeslaCoilCenter, BlockCreeperLiquefier, BlockCreeperSolidifier)
+    val blockList = arrayListOf(BlockLightingRod, BlockRainMaker, BlockThunderCollector, BlockTeslaCoil, BlockTeslaCoilCenter, BlockCreeperLiquefier, BlockCreeperSolidifier, BlockTemporalChamber)
     val itemList = arrayListOf(ItemLightingConductor)
 
     @SubscribeEvent
@@ -37,6 +37,7 @@ object RegistryEvents {
         GameRegistry.registerTileEntity(TileEntityTeslaCoil::class.java, BlockTeslaCoil.registryName)
         GameRegistry.registerTileEntity(TileEntityCreeperLiquefier::class.java, BlockCreeperLiquefier.registryName)
         GameRegistry.registerTileEntity(TileEntityCreeperSolidifier::class.java, BlockCreeperSolidifier.registryName)
+        GameRegistry.registerTileEntity(TileEntityTemporalChamber::class.java, BlockTemporalChamber.registryName)
     }
 
     @SubscribeEvent

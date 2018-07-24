@@ -9,16 +9,11 @@ import net.minecraftforge.common.capabilities.Capability
 import net.minecraftforge.energy.CapabilityEnergy
 import net.minecraftforge.energy.IEnergyStorage
 
-abstract class TileEntityEnergy: TileEntity(), IEnergyStorage {
+abstract class TileEntityEnergy: TileEntityListenable(), IEnergyStorage {
 
     internal var energy: Int = 0
     protected abstract val maxReceivableEnergy: Int
     protected abstract val maxExtractableEnergy: Int
-
-    private val listeners = mutableListOf<Container>()
-    private val listenersToAdd = mutableListOf<Container>()
-    private val listenersToRemove = mutableListOf<Container>()
-
 
     override fun readFromNBT(compound: NBTTagCompound) {
         super.readFromNBT(compound)
@@ -136,23 +131,6 @@ abstract class TileEntityEnergy: TileEntity(), IEnergyStorage {
         return false
     }
 
-    fun removeContainerListener(container: Container) {
-        listenersToRemove += container
-    }
 
-    fun addContainerListener(container: Container) {
-        listenersToAdd += container
-    }
-
-    fun updateListeners() {
-        listeners.addAll(listenersToAdd)
-        listeners.removeAll(listenersToRemove)
-
-        listenersToAdd.clear()
-        listenersToRemove.clear()
-        for(listener in listeners) {
-            listener.detectAndSendChanges()
-        }
-    }
 
 }
