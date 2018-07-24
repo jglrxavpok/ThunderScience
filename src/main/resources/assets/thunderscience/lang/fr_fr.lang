@@ -1,9 +1,28 @@
+#PARSE_ESCAPES
 tile.thunder_collector.name=Collecteur de foudre
 tile.lighting_rod.name=Paratonnerre
 tile.rain_maker.name=Machine à pluie
 tile.tesla_coil.name=Bobine Tesla
 tile.tesla_coil_center.name=Controlleur de Bobine Tesla
+tile.temporal_chamber.name=Chambre Temporelle
+tile.creeper_liquefier.name=Liquéfieur de Creeper
+tile.creeper_solidifier.name=Solidifieur de Creeper
 
-item.lighting_conductor.name=Conducteur de foudre
+fluid.liquefied_creeper=Creeper liquéfié
 
-thunderscience.gui.extended_tooltip.folded=Pressez %s pour plus d'informations
+item.lighting_conductor.name=Conducteur électrique
+
+thunderscience.gui.extended_tooltip.folded=Appuyez sur %s pour plus d'informations
+thunderscience.gui.temporal_chamber.title=Chambre Temporelle
+thunderscience.gui.tesla_coil.title=Bobine Tesla
+thunderscience.gui.liquefier.title=Liquéfieur de Creeper
+thunderscience.gui.solidifier.title=Solidifieur de Creeper
+
+thunderscience.tile.thunder_collector.description=Collectez de la foudre à partir de paratonnerres placés au dessus et transformez-la en RF!\nIl paraît même que la foudre est suffisament puissante pour envoyer des objets dans le passé...
+thunderscience.tile.temporal_chamber.description=Capable d'envoyer des objets dans le passé.\nNécessite 1.21 GW de puissance...
+thunderscience.tile.rain_maker.description=Fait tomber la pluie
+thunderscience.tile.lighting_rod.description=Attires la foudre
+thunderscience.tile.tesla_coil.description=Augmentes le rayon d'action d'une Bobine Tesla
+thunderscience.tile.tesla_coil_center.description=Controlleur de Bobine Tesla
+thunderscience.tile.creeper_liquefier.description=Liquéfies les Creeper marchant sur le bloc
+thunderscience.tile.creeper_solidifier.description=Crées des Creeper à partir de Creeper liquéfié

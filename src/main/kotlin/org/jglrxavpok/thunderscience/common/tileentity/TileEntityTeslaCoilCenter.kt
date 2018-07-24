@@ -36,7 +36,7 @@ class TileEntityTeslaCoilCenter: TileEntityEnergy(), ITickable, IEnergyStorage {
         val ConsumptionPerTick = 100
         val ConsumptionPerShock = 25.k
         val EnergyRequired = ConsumptionPerShock
-        val MaxCooldown = 200
+        val MaxCooldown = 125
     }
 
     private val tmpPos = BlockPos.MutableBlockPos()

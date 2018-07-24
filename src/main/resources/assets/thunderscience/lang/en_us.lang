@@ -1,11 +1,28 @@
+#PARSE_ESCAPES
 tile.thunder_collector.name=Thunder Collector
 tile.lighting_rod.name=Lighting Rod
 tile.rain_maker.name=Rain Maker
 tile.tesla_coil.name=Tesla Coil
 tile.tesla_coil_center.name=Tesla Coil Controller
+tile.temporal_chamber.name=Temporal Chamber
+tile.creeper_liquefier.name=Creeper Liquefier
+tile.creeper_solidifier.name=Creeper Solidifier
+
+fluid.liquefied_creeper=Liquefied Creeper
 
 item.lighting_conductor.name=Lighting Conductor
 
 thunderscience.gui.extended_tooltip.folded=Press %s for more information
+thunderscience.gui.temporal_chamber.title=Temporal Chamber
+thunderscience.gui.tesla_coil.title=Bobine Tesla
+thunderscience.gui.liquefier.title=Creeper Liquefier
+thunderscience.gui.solidifier.title=Creeper Solidifier
 
-fluid.liquefied_creeper=Liquefied Creeper
+thunderscience.tile.thunder_collector.description=Collect thunder from lighting rods placed above and convert it to RF energy!\nSome say it is powerful enough to send items back in time...
+thunderscience.tile.temporal_chamber.description=Able to send items back in time.\nRequires a enormous amount of energy: 1.21 GW
+thunderscience.tile.rain_maker.description=Makes it rain
+thunderscience.tile.lighting_rod.description=Attracts lighting
+thunderscience.tile.tesla_coil.description=Increases the operation radius of a Tesla Coil
+thunderscience.tile.tesla_coil_center.description=Controller for a Tesla Coil
+thunderscience.tile.creeper_liquefier.description=Liquefies any Creeper walking on this block
+thunderscience.tile.creeper_solidifier.description=Creates Creepers from Liquefied Creeper

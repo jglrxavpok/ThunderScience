@@ -30,7 +30,7 @@ abstract class TileEntityEnergy: TileEntityListenable(), IEnergyStorage {
     }
 
     override fun extractEnergy(maxExtract: Int, simulate: Boolean): Int {
-        if(!canReceive())
+        if(!canExtract())
             return 0
         val maxExtracted = Math.min(energy, Math.min(maxExtract, maxExtractableEnergy))
         val newEnergyLevel = energy - maxExtracted

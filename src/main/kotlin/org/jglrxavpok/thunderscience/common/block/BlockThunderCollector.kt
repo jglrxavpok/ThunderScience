@@ -42,7 +42,7 @@ object BlockThunderCollector: Block(Material.IRON) {
     override fun addInformation(stack: ItemStack, world: World?, tooltip: MutableList<String>, advanced: ITooltipFlag) {
         val sneakKeybind = Minecraft.getMinecraft().gameSettings.keyBindSneak
         if(Keyboard.isKeyDown(sneakKeybind.keyCode)) {
-            tooltip.add(TextComponentTranslation(ThunderScience.ModID+".item.thunder_collector.description").formattedText)
+            tooltip.add(TextComponentTranslation(ThunderScience.ModID+".tile.thunder_collector.description").formattedText)
         } else {
             val text = TextFormatting.ITALIC.toString() + TextComponentTranslation(ExtendedTooltipTranslationKey, sneakKeybind.displayName).unformattedText
             tooltip.add(text)
