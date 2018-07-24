@@ -5,12 +5,16 @@ import net.minecraft.block.material.Material
 import net.minecraft.block.state.IBlockState
 import net.minecraft.entity.Entity
 import net.minecraft.entity.monster.EntityCreeper
+import net.minecraft.entity.player.EntityPlayer
 import net.minecraft.tileentity.TileEntity
+import net.minecraft.util.EnumFacing
+import net.minecraft.util.EnumHand
 import net.minecraft.util.EnumParticleTypes
 import net.minecraft.util.ResourceLocation
 import net.minecraft.util.math.BlockPos
 import net.minecraft.world.World
 import org.jglrxavpok.thunderscience.ThunderScience
+import org.jglrxavpok.thunderscience.common.ThunderGuiHandler
 import org.jglrxavpok.thunderscience.common.tileentity.TileEntityCreeperLiquefier
 import org.jglrxavpok.thunderscience.network.S0ParticleSpawn
 
@@ -48,5 +52,12 @@ object BlockCreeperLiquefier: Block(Material.IRON) {
                 }
             }
         }
+    }
+
+    override fun onBlockActivated(world: World, pos: BlockPos, state: IBlockState, player: EntityPlayer, hand: EnumHand, facing: EnumFacing, hitX: Float, hitY: Float, hitZ: Float): Boolean {
+        if(world.isRemote)
+            return true
+        player.openGui(ThunderScience, ThunderGuiHandler.CreeperLiquefierID, world, pos.x, pos.y, pos.z)
+        return true
     }
 }

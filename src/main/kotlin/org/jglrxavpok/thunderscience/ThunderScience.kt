@@ -11,10 +11,13 @@ import net.minecraftforge.fluids.FluidRegistry
 import net.minecraftforge.fml.common.Mod
 import net.minecraftforge.fml.common.SidedProxy
 import net.minecraftforge.fml.common.event.FMLInitializationEvent
+import net.minecraftforge.fml.common.event.FMLPostInitializationEvent
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent
 import net.minecraftforge.fml.common.network.NetworkRegistry
 import net.minecraftforge.fml.common.network.simpleimpl.SimpleNetworkWrapper
+import org.apache.logging.log4j.Logger
 import org.jglrxavpok.thunderscience.common.RegistryEvents
+import org.jglrxavpok.thunderscience.common.TemporalChamberRecipes
 import org.jglrxavpok.thunderscience.common.ThunderGuiHandler
 import org.jglrxavpok.thunderscience.common.ThunderProxy
 import org.jglrxavpok.thunderscience.common.event.EntityEventHandlers
@@ -32,6 +35,7 @@ object ThunderScience {
     val network = SimpleNetworkWrapper(ModID)
     val MaterialLiquefiedCreeper = MaterialLiquid(MapColor.GREEN)
     val DamageSourceElectric: DamageSource = DamageSource("$ModID:electric")
+    lateinit var logger: Logger
 
     val CreativeTab = object: CreativeTabs(ModID) {
         override fun getTabIconItem(): ItemStack {
@@ -41,6 +45,7 @@ object ThunderScience {
 
     @Mod.EventHandler
     fun preInit(event: FMLPreInitializationEvent) {
+        logger = event.modLog
         FluidRegistry.enableUniversalBucket()
         MinecraftForge.EVENT_BUS.register(RegistryEvents)
         MinecraftForge.EVENT_BUS.register(EntityEventHandlers)
@@ -55,5 +60,10 @@ object ThunderScience {
     @Mod.EventHandler
     fun init(event: FMLInitializationEvent) {
         proxy.registerPackets()
+    }
+
+    @Mod.EventHandler
+    fun postInit(event: FMLPostInitializationEvent) {
+        TemporalChamberRecipes.registerRecipesFromOreDict()
     }
 }

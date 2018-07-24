@@ -16,8 +16,8 @@ import org.jglrxavpok.thunderscience.common.tileentity.TileEntityTeslaCoilCenter
 
 object ThunderGuiHandler: IGuiHandler {
     val TeslaCoilID: Int = 1
-    val CreeperTrap: Int = 2
-    val CreeperSolidifier: Int = 3
+    val CreeperLiquefierID: Int = 2
+    val CreeperSolidifierID: Int = 3
 
     override fun getClientGuiElement(ID: Int, player: EntityPlayer, world: World, x: Int, y: Int, z: Int): Any? {
         return when(ID) {
@@ -29,7 +29,7 @@ object ThunderGuiHandler: IGuiHandler {
                     return null
                 GuiTeslaCoil(player, coreTileEntity)
             }
-            CreeperSolidifier -> {
+            CreeperSolidifierID -> {
                 val pos = BlockPos.PooledMutableBlockPos.retain(x, y, z)
                 val tileEntity = world.getTileEntity(pos)
                 pos.release()
@@ -37,7 +37,7 @@ object ThunderGuiHandler: IGuiHandler {
                     return null
                 GuiCreeperSolidifier(player, tileEntity)
             }
-            CreeperTrap -> {
+            CreeperLiquefierID -> {
                 val pos = BlockPos.PooledMutableBlockPos.retain(x, y, z)
                 val tileEntity = world.getTileEntity(pos)
                 pos.release()
@@ -59,7 +59,7 @@ object ThunderGuiHandler: IGuiHandler {
                     return null
                 ContainerTeslaCoil(player, coreTileEntity)
             }
-            CreeperSolidifier -> {
+            CreeperSolidifierID -> {
                 val pos = BlockPos.PooledMutableBlockPos.retain(x, y, z)
                 val tileEntity = world.getTileEntity(pos)
                 pos.release()
@@ -67,7 +67,7 @@ object ThunderGuiHandler: IGuiHandler {
                     return null
                 ContainerCreeperSolidifier(player, tileEntity)
             }
-            CreeperTrap -> {
+            CreeperLiquefierID -> {
                 val pos = BlockPos.PooledMutableBlockPos.retain(x, y, z)
                 val tileEntity = world.getTileEntity(pos)
                 pos.release()

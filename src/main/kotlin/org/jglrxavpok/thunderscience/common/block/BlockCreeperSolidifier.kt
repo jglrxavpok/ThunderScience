@@ -6,12 +6,14 @@ import net.minecraft.block.properties.PropertyEnum
 import net.minecraft.block.state.BlockStateContainer
 import net.minecraft.block.state.IBlockState
 import net.minecraft.entity.EntityLivingBase
+import net.minecraft.entity.player.EntityPlayer
 import net.minecraft.item.ItemStack
 import net.minecraft.tileentity.TileEntity
 import net.minecraft.util.*
 import net.minecraft.util.math.BlockPos
 import net.minecraft.world.World
 import org.jglrxavpok.thunderscience.ThunderScience
+import org.jglrxavpok.thunderscience.common.ThunderGuiHandler
 import org.jglrxavpok.thunderscience.common.tileentity.TileEntityCreeperSolidifier
 
 val Orientation = PropertyEnum.create("facing", EnumFacing::class.java)
@@ -66,5 +68,12 @@ object BlockCreeperSolidifier: Block(Material.IRON) {
 
     override fun createBlockState(): BlockStateContainer {
         return BlockStateContainer(this, Orientation)
+    }
+
+    override fun onBlockActivated(world: World, pos: BlockPos, state: IBlockState, player: EntityPlayer, hand: EnumHand, facing: EnumFacing, hitX: Float, hitY: Float, hitZ: Float): Boolean {
+        if(world.isRemote)
+            return true
+        player.openGui(ThunderScience, ThunderGuiHandler.CreeperSolidifierID, world, pos.x, pos.y, pos.z)
+        return true
     }
 }
